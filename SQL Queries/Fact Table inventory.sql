@@ -53,6 +53,7 @@ full_table as (
 		AND sc.WeekStartDate = m.WeekStartDate
 )
 
+/*	
 SELECT * from full_table
 where WeeklySalesQty < NetMovementQty order by WeekStartDate,LocationID,ProductSKU
 
@@ -66,6 +67,7 @@ SELECT
     from_location_id,
     to_location_id,
     qty
+*/
 FROM silver__inventory_movements__lite
 WHERE sku = 'SKU-0001'
   AND (from_location_id = 'WEB' OR to_location_id = 'WEB')
